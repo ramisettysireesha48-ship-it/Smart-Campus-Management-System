@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🎓 SmartCampus</div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#students">Students</a>
+            <a href="#attendance">Attendance</a>
+            <a href="#events">Events</a>
+            <a href="#notices">Notices</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Smart Campus Management System</h1>
+            <p>
+                Manage students, attendance, events and campus notices
+                in one simple platform.
+            </p>
+            <button onclick="showMessage()">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="container">
+        <h2>Campus Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">👨‍🎓</div>
+                <h3 id="studentCount">0</h3>
+                <p>Total Students</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📅</div>
+                <h3>92%</h3>
+                <p>Attendance</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎉</div>
+                <h3>8</h3>
+                <p>Upcoming Events</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📢</div>
+                <h3>5</h3>
+                <p>New Notices</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Students -->
+    <section id="students" class="container section">
+        <h2>Student Management</h2>
+
+        <div class="form-box">
+            <input type="text" id="studentName" placeholder="Enter student name">
+            <input type="text" id="studentRoll" placeholder="Enter roll number">
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Attendance -->
+    <section id="attendance" class="container section">
+
+        <h2>Attendance Management</h2>
+
+        <div class="attendance-box">
+
+            <div>
+                <h3>Present</h3>
+                <p id="presentCount">45</p>
+            </div>
+
+            <div>
+                <h3>Absent</h3>
+                <p id="absentCount">5</p>
+            </div>
+
+            <div>
+                <h3>Total</h3>
+                <p>50</p>
+            </div>
+
+        </div>
+
+        <button onclick="markAttendance()">Mark Attendance</button>
+
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="container section">
+
+        <h2>Campus Events</h2>
+
+        <div class="event-container">
+
+            <div class="event">
+                <h3>💻 Tech Fest 2026</h3>
+                <p>Date: 15 October 2026</p>
+                <button onclick="registerEvent('Tech Fest')">
+                    Register
+                </button>
+            </div>
+
+            <div class="event">
+                <h3>🏆 Sports Day</h3>
+                <p>Date: 20 October 2026</p>
+                <button onclick="registerEvent('Sports Day')">
+                    Register
+                </button>
+            </div>
+
+            <div class="event">
+                <h3>🎤 Cultural Fest</h3>
+                <p>Date: 25 October 2026</p>
+                <button onclick="registerEvent('Cultural Fest')">
+                    Register
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Notices -->
+    <section id="notices" class="container section">
+
+        <h2>Campus Notices</h2>
+
+        <div class="notice">
+            <strong>📢 Examination Notice</strong>
+            <p>
+                Internal examinations will begin from 10 November 2026.
+            </p>
+        </div>
+
+        <div class="notice">
+            <strong>📢 Holiday Notice</strong>
+            <p>
+                The campus will remain closed on the upcoming public holiday.
+            </p>
+        </div>
+
+        <div class="notice">
+            <strong>📢 Library Notice</strong>
+            <p>
+                Students are requested to return overdue books.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Smart Campus Management System</p>
+        <p>Developed by CSE Students</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
